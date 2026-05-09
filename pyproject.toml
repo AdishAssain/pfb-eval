@@ -1,0 +1,52 @@
+[project]
+name = "pfb-eval"
+version = "0.1.0"
+description = "A 3-axis trustworthiness evaluation harness for conversational AI: Plausibility (factual grounding against a domain knowledge base), Faithfulness (within-conversation self-consistency), Bias (recommendation-divergence under paired persona injection). Demonstrated on VaxBot, an Indian-context immunisation research test-bed."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+    # OpenRouter exposes an OpenAI-compatible API; one client handles every provider.
+    "openai>=1.40.0",
+    "pydantic>=2.7.0",
+    "jinja2>=3.1.0",
+    "rich>=13.7.0",
+    "python-dotenv>=1.0.0",
+    "numpy>=1.26.0",
+    "tenacity>=9.0.0",
+]
+
+[project.optional-dependencies]
+ml = [
+    "torch>=2.2.0",
+    "transformers>=4.40.0",
+    "sentence-transformers>=2.7.0",
+    "deepeval>=1.0.0",
+]
+nlp = [
+    "scispacy>=0.5.4",
+]
+dev = ["pytest>=8.0.0", "ruff>=0.6.0"]
+
+[project.scripts]
+pfb-eval = "src.main:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["docs", "results"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402"]
+"src/eval/log.py" = ["B904"]

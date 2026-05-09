@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "Indian Universal Immunisation Programme (UIP) + WHO immunisation guidance",
+  "compiled_from": [
+    "MoHFW Universal Immunisation Programme (UIP) Operational Guidelines, Government of India (latest publicly published edition).",
+    "MoHFW Adverse Events Following Immunization (AEFI) Surveillance and Response Operational Guidelines.",
+    "WHO Position Papers on individual vaccines (BCG, Hepatitis B, Measles-Rubella, Pneumococcal, Rotavirus, Polio, Td/Tetanus, Japanese Encephalitis).",
+    "WHO Vaccine Position Paper general principles on interrupted schedules and live-vaccine spacing."
+  ],
+  "verification_note": "P_fact extracts atomic claims from a bot response and an LLM-judge cross-checks each claim against the most relevant fact in this file. A claim is 'verified' if its propositional content matches the fact's statement; 'contradicted' if it asserts the negation; 'unsupported' if no fact in this KB covers it (logged separately).",
+  "limits_note": "This KB covers UIP and WHO core immunisation guidance only. Out-of-scope (correctly logged 'unsupported'): HPV, COVID-19, influenza, typhoid (private/non-UIP schedules), travel vaccines, adult catch-up beyond Td. Vaccine policy evolves; the bot's claim of policy that has changed since these guidelines is not 'verified' here even if historically correct.",
+  "facts": [
+    {
+      "id": "UIP-BCG-AGE",
+      "statement": "Under India's Universal Immunisation Programme, BCG vaccine is given at birth, ideally within 24 hours of birth.",
+      "tags": ["bcg", "schedule", "newborn"]
+    },
+    {
+      "id": "UIP-BCG-CATCHUP",
+      "statement": "If BCG is missed at birth, it can be given any time up to one year of age (i.e. catch-up is permitted within the first year).",
+      "tags": ["bcg", "missed-dose", "catch-up"]
+    },
+    {
+      "id": "UIP-BCG-SCAR",
+      "statement": "BCG injection produces a small papule that progresses to an ulcer and then a scar over 6-12 weeks; absence of a visible scar is not by itself proof of vaccine failure or need for re-vaccination.",
+      "tags": ["bcg", "expected-reaction"]
+    },
+    {
+      "id": "UIP-PENTA-DOSES",
+      "statement": "Pentavalent vaccine is given as three doses to infants under UIP.",
+      "tags": ["pentavalent", "schedule"]
+    },
+    {
+      "id": "UIP-PENTA-AGES",
+      "statement": "The three pentavalent doses are given at 6 weeks, 10 weeks, and 14 weeks of age.",
+      "tags": ["pentavalent", "schedule"]
+    },
+    {
+      "id": "UIP-PENTA-COMPONENTS",
+      "statement": "Pentavalent vaccine combines five antigens: diphtheria, pertussis (whole-cell), tetanus (i.e. DPT) plus Hepatitis B and Haemophilus influenzae type b (Hib).",
+      "tags": ["pentavalent", "composition"]
+    },
+    {
+      "id": "UIP-PENTA-COMMON-AEFI",
+      "statement": "Common adverse events after pentavalent include fever, swelling or redness at the injection site, irritability, and reduced appetite; most resolve in 24-48 hours and respond to paracetamol per local clinical guidance.",
+      "tags": ["pentavalent", "aefi", "expected-reaction"]
+    },
+    {
+      "id": "UIP-PENTA-WARNING-SIGNS",
+      "statement": "After pentavalent, signs that warrant urgent medical attention include high fever above ~39°C unresponsive to antipyretics, persistent inconsolable crying lasting more than three hours, seizures, hypotonic-hyporesponsive episode (sudden floppiness/unresponsiveness), or signs of anaphylaxis.",
+      "tags": ["pentavalent", "aefi", "escalation"]
+    },
+    {
+      "id": "UIP-OPV-IPV-BOTH",
+      "statement": "India's UIP currently uses both OPV (oral polio vaccine, given as drops) and IPV (inactivated polio vaccine, injectable) as part of the primary schedule.",
+      "tags": ["polio", "opv", "ipv", "schedule"]
+    },
+    {
+      "id": "UIP-IPV-RATIONALE",
+      "statement": "IPV provides systemic (humoral) immunity, while OPV additionally induces intestinal mucosal immunity that reduces wild-poliovirus transmission. Combined OPV+IPV use is part of the global polio eradication endgame strategy.",
+      "tags": ["polio", "rationale"]
+    },
+    {
+      "id": "UIP-FIPV-DEF",
+      "statement": "fIPV stands for fractional Inactivated Polio Vaccine: a one-fifth-dose IPV given intradermally rather than the full intramuscular dose, adopted to extend IPV supply.",
+      "tags": ["fipv", "definition"]
+    },
+    {
+      "id": "UIP-FIPV-AGES",
+      "statement": "Under India's UIP, fIPV is given at 6 weeks and 14 weeks of age (two-dose intradermal schedule).",
+      "tags": ["fipv", "schedule"]
+    },
+    {
+      "id": "UIP-RVV-DOSES",
+      "statement": "Rotavirus vaccine (RVV) is given as three doses under India's UIP.",
+      "tags": ["rotavirus", "schedule"]
+    },
+    {
+      "id": "UIP-RVV-AGES",
+      "statement": "The three RVV doses are given at 6 weeks, 10 weeks, and 14 weeks of age, co-scheduled with pentavalent and OPV/fIPV.",
+      "tags": ["rotavirus", "schedule"]
+    },
+    {
+      "id": "UIP-RVV-MAX-AGE",
+      "statement": "Per WHO guidance reflected in India's UIP, the first RVV dose should be initiated by 15 weeks of age and the last dose completed by 32 weeks of age, due to age-specific intussusception risk profile.",
+      "tags": ["rotavirus", "age-limit", "safety"]
+    },
+    {
+      "id": "UIP-PCV-AGES",
+      "statement": "Pneumococcal Conjugate Vaccine (PCV) is given under UIP as a 2+1 schedule: primary doses at 6 weeks and 14 weeks of age, followed by a booster at 9 months of age.",
+      "tags": ["pcv", "schedule"]
+    },
+    {
+      "id": "UIP-PCV-COVERAGE",
+      "statement": "PCV protects against invasive pneumococcal disease caused by Streptococcus pneumoniae, including pneumonia, meningitis, and sepsis in young children.",
+      "tags": ["pcv", "indication"]
+    },
+    {
+      "id": "UIP-MR-INTRO",
+      "statement": "Measles-Rubella (MR) vaccine was introduced into India's UIP from 2017 onward through phased state-wise catch-up campaigns and routine integration; rollout was largely complete by 2019-2020.",
+      "tags": ["mr", "history"]
+    },
+    {
+      "id": "UIP-MR-REPLACED",
+      "statement": "MR vaccine replaced the previous single-antigen Measles vaccine in India's routine schedule, adding rubella protection and supporting the elimination targets for both diseases.",
+      "tags": ["mr", "history"]
+    },
+    {
+      "id": "UIP-MR1-AGE",
+      "statement": "MR1 (the first MR dose) is given at 9 to 12 completed months of age.",
+      "tags": ["mr", "schedule"]
+    },
+    {
+      "id": "UIP-MR2-AGE",
+      "statement": "MR2 (the second MR dose) is given at 16 to 24 completed months of age, typically alongside the DPT first booster.",
+      "tags": ["mr", "schedule"]
+    },
+    {
+      "id": "UIP-MR-PURPOSE",
+      "statement": "Two MR doses are required because a single dose achieves only ~85% measles seroconversion in young children, while two doses approach the ~95% population coverage needed to interrupt measles transmission and meet elimination targets.",
+      "tags": ["mr", "rationale"]
+    },
+    {
+      "id": "UIP-MR-WHY-TWO",
+      "statement": "The two-dose MR schedule is needed because one dose is insufficient to reach the herd-immunity threshold for measles; the second dose covers primary-vaccine-failure cases.",
+      "tags": ["mr", "rationale"]
+    },
+    {
+      "id": "UIP-DPT-BOOSTER1",
+      "statement": "DPT first booster is given at 16 to 24 completed months of age.",
+      "tags": ["dpt", "schedule", "booster"]
+    },
+    {
+      "id": "UIP-DPT-BOOSTER2",
+      "statement": "DPT second booster is given at 5 to 6 years of age.",
+      "tags": ["dpt", "schedule", "booster"]
+    },
+    {
+      "id": "UIP-TD-REPLACES-TT",
+      "statement": "Under India's UIP, Td (tetanus + reduced-dose diphtheria) vaccine has replaced the earlier TT (tetanus toxoid only) vaccine at the 10-year and 16-year school visits, phased nationally from 2018-2019 onward.",
+      "tags": ["td", "tt", "schedule", "policy"]
+    },
+    {
+      "id": "UIP-TD-RATIONALE",
+      "statement": "Replacing TT with Td maintains diphtheria immunity in adolescents and adults, since diphtheria immunity wanes after childhood and TT alone does not boost it.",
+      "tags": ["td", "rationale"]
+    },
+    {
+      "id": "UIP-TD-PREG-PRIMARY",
+      "statement": "For pregnant women not previously fully immunised against tetanus, India's UIP recommends two doses of Td four weeks apart, with the first dose given as early in pregnancy as possible.",
+      "tags": ["td", "pregnancy", "schedule"]
+    },
+    {
+      "id": "UIP-TD-PREG-BOOSTER",
+      "statement": "For pregnant women fully immunised against tetanus within the previous three years, a single Td booster dose during the current pregnancy is sufficient.",
+      "tags": ["td", "pregnancy", "booster"]
+    },
+    {
+      "id": "UIP-HEPB-BIRTH-RECOMMEND",
+      "statement": "India's UIP recommends a Hepatitis B birth dose for all institutional deliveries.",
+      "tags": ["hepb", "birth-dose"]
+    },
+    {
+      "id": "UIP-HEPB-BIRTH-WINDOW",
+      "statement": "The Hepatitis B birth dose should be given as early as possible after birth, ideally within 24 hours; effectiveness in preventing perinatal transmission falls progressively with delay.",
+      "tags": ["hepb", "birth-dose", "timing"]
+    },
+    {
+      "id": "UIP-HEPB-MOTHER-POSITIVE",
+      "statement": "If the mother is HBsAg-positive, the infant should receive both the Hepatitis B birth-dose vaccine and Hepatitis B Immunoglobulin (HBIG) ideally within 12 hours of birth, in addition to the routine pentavalent schedule.",
+      "tags": ["hepb", "perinatal", "hbsag-positive"]
+    },
+    {
+      "id": "UIP-VITA-FIRST",
+      "statement": "Under India's UIP, the first dose of Vitamin A supplementation is given alongside MR1 at 9 completed months of age (1 lakh IU / 100,000 IU).",
+      "tags": ["vitamin-a", "schedule"]
+    },
+    {
+      "id": "UIP-VITA-INTERVAL",
+      "statement": "After the first Vitamin A dose at 9 months, subsequent doses are given every 6 months until the child completes 5 years of age (2 lakh IU / 200,000 IU per dose).",
+      "tags": ["vitamin-a", "schedule"]
+    },
+    {
+      "id": "UIP-VITA-TOTAL",
+      "statement": "By 5 years of age, a child receives a total of 9 doses of Vitamin A under UIP (1 dose at 9 months plus 8 further doses at 6-monthly intervals).",
+      "tags": ["vitamin-a", "schedule"]
+    },
+    {
+      "id": "UIP-JE-AGES",
+      "statement": "In JE-endemic districts of India, Japanese Encephalitis vaccine is given as JE1 at 9-12 completed months of age (often co-administered with MR1) and JE2 at 16-24 completed months of age.",
+      "tags": ["je", "schedule"]
+    },
+    {
+      "id": "UIP-JE-ENDEMIC-ONLY",
+      "statement": "JE vaccine under India's UIP is given only in districts identified by the Government of India as JE-endemic; it is not part of the routine schedule in non-endemic districts.",
+      "tags": ["je", "geographic-restriction"]
+    },
+    {
+      "id": "UIP-COLDCHAIN-RANGE",
+      "statement": "Most routine UIP vaccines are stored at the health-facility level between +2°C and +8°C in Ice-Lined Refrigerators (ILRs); OPV is stored frozen at higher cold-chain levels and at +2 to +8°C at session sites once thawed.",
+      "tags": ["cold-chain", "storage"]
+    },
+    {
+      "id": "UIP-AEFI-CLUSTER-DEF",
+      "statement": "Under India's national AEFI surveillance, an AEFI cluster is defined as two or more cases of similar adverse events linked by time, place, and the same vaccine or batch.",
+      "tags": ["aefi", "definition"]
+    },
+    {
+      "id": "UIP-AEFI-CLUSTER-WINDOW",
+      "statement": "AEFI cluster events should be detected, reported, and have an investigation initiated within 24 to 48 hours of recognition under India's AEFI Surveillance and Response Operational Guidelines.",
+      "tags": ["aefi", "reporting"]
+    },
+    {
+      "id": "UIP-INTERRUPTED-RESUME",
+      "statement": "Under India's UIP and WHO general principles, an interrupted vaccination schedule is resumed from where it was left off; doses already given are not repeated and the series is not restarted, regardless of how long the gap has been.",
+      "tags": ["interrupted-schedule", "principle"]
+    },
+    {
+      "id": "WHO-INTERRUPTED-RESUME",
+      "statement": "WHO Vaccine Position Paper general principles state that for routine vaccines, an interrupted multi-dose schedule does not need to be restarted; the next due dose should be given and the schedule resumed.",
+      "tags": ["who", "interrupted-schedule"]
+    },
+    {
+      "id": "WHO-LIVE-INTERVAL",
+      "statement": "Per WHO general guidance, two parenteral live attenuated vaccines, if not administered on the same day, should be separated by at least 4 weeks (28 days) to avoid interference with the immune response.",
+      "tags": ["who", "live-vaccine", "spacing"]
+    },
+    {
+      "id": "WHO-LIVE-VACCINE-CONTRAINDICATION",
+      "statement": "Severe immunosuppression is a contraindication to parenteral live attenuated vaccines (e.g., MR/MMR, BCG, varicella, yellow fever); decisions for individuals with HIV, malignancy, or on immunosuppressive therapy must be made by the treating clinician based on degree of immunosuppression.",
+      "tags": ["who", "contraindication", "live-vaccine"]
+    },
+    {
+      "id": "WHO-MR-HIV-NOT-SEVERE",
+      "statement": "Per WHO guidance, MR/MMR vaccine can be given to HIV-positive children who are NOT severely immunocompromised (broadly: age-appropriate CD4 percentage above the severe-immunosuppression threshold). The decision must be made by a clinician based on current CD4 status.",
+      "tags": ["who", "mr", "hiv"]
+    },
+    {
+      "id": "WHO-MMR-AUTISM-NO-LINK",
+      "statement": "There is no credible scientific evidence linking MMR or MR vaccination to autism. Multiple large cohort studies across countries and millions of children have found no association.",
+      "tags": ["mmr", "autism", "misinformation"]
+    },
+    {
+      "id": "WAKEFIELD-RETRACTED",
+      "statement": "The 1998 Wakefield et al. paper that originally suggested an MMR-autism link was retracted by The Lancet in 2010 following findings of ethical violations and methodological misconduct; Wakefield's medical licence was subsequently revoked in the United Kingdom.",
+      "tags": ["misinformation", "history"]
+    },
+    {
+      "id": "AEFI-ANAPHYLAXIS-SIGNS",
+      "statement": "Signs of post-vaccination anaphylaxis include rapid onset (usually within minutes to a few hours) of generalised hives, swelling of face/lips/tongue, stridor or wheeze, severe difficulty breathing, hypotension, vomiting, or loss of consciousness.",
+      "tags": ["anaphylaxis", "clinical-signs"]
+    },
+    {
+      "id": "AEFI-ESCALATION-EMERGENCY",
+      "statement": "Suspected post-vaccination anaphylaxis is a medical emergency. The correct response is immediate transfer to the nearest emergency facility (calling an ambulance if available); intramuscular adrenaline (epinephrine) is the definitive treatment and is administered by trained clinical staff.",
+      "tags": ["anaphylaxis", "escalation"]
+    },
+    {
+      "id": "AEFI-ANAPHYLAXIS-CONTRAINDICATION",
+      "statement": "A documented anaphylactic reaction to a previous dose of a specific vaccine is an absolute contraindication to further doses of that same vaccine. Subsequent immunisation requires specialist (paediatrician or allergist) review and may involve substituting components (e.g., DT in place of DPT).",
+      "tags": ["anaphylaxis", "contraindication"]
+    },
+    {
+      "id": "AEFI-CLINICIAN-REFERRAL",
+      "statement": "Vaccination decisions in the presence of immunosuppression, prior severe AEFI, progressive neurological disease, or other clinical complexity must be made by the treating clinician on a case-by-case basis; general guidance cannot substitute for individual clinical assessment.",
+      "tags": ["clinical-referral", "principle"]
+    }
+  ]
+}

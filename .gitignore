@@ -1,0 +1,57 @@
+# Environment — exclude actual env files but keep the template
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+.turbo/
+out/
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs / scratch
+*.log
+logs/
+tmp/
+.tmp/
+
+# Project artifacts
+models/
+results/
+!results/.gitkeep
+.env.local
+.deepeval/
+
+# Local
+.claude/
+CLAUDE.md
+CHANGELOG.md
+TODO.md
+notes/
+sessions/
+*.pdf
