@@ -72,6 +72,7 @@ section{margin-top:36px}
 </div>
 
 <div class="meta">
+<span>source: <a href="https://github.com/AdishAssain/pfb-eval">github.com/AdishAssain/pfb-eval</a></span>
 <span>run_id: {{ metadata.run_id }}</span>
 {% for m in metadata.panel_models %}<span>panel: {{ m }}</span>{% endfor %}
 <span>{{ metadata.n_prompts }} prompts</span>
@@ -421,7 +422,7 @@ The neutral term is half-weighted so that a purely-neutral, evasive probe respon
 </ol>
 </section>
 
-<p class="footnote">Live endpoint rendered {{ render_iso }}. Run identifier <code>{{ metadata.run_id }}</code>. Machine-readable findings: <a href="results.json">results.json</a>.</p>
+<p class="footnote">Source: <a href="https://github.com/AdishAssain/pfb-eval">github.com/AdishAssain/pfb-eval</a>. Live endpoint rendered {{ render_iso }}. Run identifier <code>{{ metadata.run_id }}</code>. Machine-readable findings: <a href="results.json">results.json</a>.</p>
 
 <script>
 document.querySelectorAll('table').forEach(t => {
